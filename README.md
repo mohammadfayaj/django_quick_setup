@@ -1,12 +1,9 @@
-# Django Auto Development Project Creation.
+# Django Development Project Auto Creation.
 ## Are you bored to create Django dev Project?
-
 
 #### `This is a repository of Python scripts that can be used for creating Auto Django project. Here are some features of this repository:`
 
-
 https://github.com/mohammadfayaj/Django_Auto_Project/assets/61315077/3a89c966-1aab-480c-b24f-e3d0ff2494e5
-
 
 ### The script will add some feature that ```Django default``` doesn't provide such as:-
 
