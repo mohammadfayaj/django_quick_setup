@@ -1,14 +1,69 @@
-# Django Development Project Creation
-## Are you bored to create django dev Project?
+# Django Auto Development Project Creation.
+## Are you bored to create Django dev Project?
 
-This is a repository of Python scripts that can be used for various purposes. Here are some features of this repository:
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
 
-- The scripts are written in Python 3 and use standard libraries such as sys, os, re, and argparse.
-- The scripts are organized into subfolders based on their functionality, such as data processing, web scraping, automation, etc.
-- The scripts have docstrings and comments to explain their purpose, usage, and parameters.
-- The scripts have error handling and logging mechanisms to ensure robustness and reliability.
-- The scripts can be executed from the command line or imported as modules in other Python programs.
+## `This is a repository of Python scripts that can be used for creating Auto Django project. Here are some features of this repository:`
 
-To use the scripts, you need to have Python 3 installed on your system. You can download it from https://www.python.org/downloads/. You also need to clone this repository or download the zip file from https://github.com/user/python-scripts. To run a script, navigate to the subfolder where it is located and type `python script_name.py` followed by any arguments or options. For example, to run the script that converts CSV files to JSON files, type `python csv_to_json.py -i input.csv -o output.json`. To see the help message for a script, type `python script_name.py -h` or `python script_name.py --help`. For example, to see the help message for the script that converts CSV files to JSON files, type `python csv_to_json.py -h`.
+...
+### The script will add some feature that ```Django default``` doesn't provide such as:-
+
+```
+import os
+------
+
+INSTALLED_APPS = [
+    ----------
+    "test_app",
+]
+
+
+TEMPLATES = [
+    ----------
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+    ----------
+]
+
+STATIC_ROOT = (os.path.join(BASE_DIR, 'static'),)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_URL = "static/"
+
+```
+
+- The script will create `templates` and `static` folder
+- & also create `forms.py`, `urls.py`
+
+
+```
+# example modified urls.py
+
+from django.urls import path 
+from .views import * 
+  
+app_name = 'test_app'
+ 
+urlpatterns = [ 
+ path('', home, name='home'), 
+]
+
+
+# example modified views.py
+
+from django.http import HttpResponse 
+from django.shortcuts import render 
+ 
+# Create your views here. 
+def home(request):
+    return HttpResponse("<h1 style='text-align: center; margin-top: 10rem;'>Everything Good!</h1>") 
+
+```
+
+
+- #### The scripts are written in Python 3+ and use standard libraries such as `subprocess`, `os`, `shutil`, and `pathlib`.
+- #### The scripts can be executed from the command line or just double click on the `execute_django_dev_create.cmd` 
+
+
+....
 
 This repository is open source and licensed under the MIT License. You are free to use, modify, and distribute the scripts as long as you give credit to the original author and include the license file. If you find any bugs or have any suggestions for improvement, please open an issue or a pull request on GitHub. Thank you for using these Python scripts!

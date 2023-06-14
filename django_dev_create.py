@@ -43,7 +43,7 @@ settings = os.path.join(file_path, settings_name)
 with open(f'{settings}', 'r+') as f:
     lines = f.readlines()
     lines.insert(11, 'import os\n')
-    lines.insert(39, f'    "{app_name}",\n')
+    lines.insert(40, f'    "{app_name}",\n')
     lines[58] = "        'DIRS': [os.path.join(BASE_DIR, 'templates')],\n" 
     lines.insert(119, "STATIC_ROOT = (os.path.join(BASE_DIR, 'static'),)\n")
     lines.insert(120, "MEDIA_URL = '/media/'\n")
@@ -72,7 +72,6 @@ root_path = f"{cwd}\{project_name}"
 app_path = f"{cwd}\{project_name}\{app_name}"
 create_urls = os.path.join(app_path, 'urls.py')
 
-
 templates_dir = "templates"
 static_dir = 'static'
 
@@ -86,12 +85,25 @@ os.makedirs(static_abs_dir, exist_ok=True)
 forms = Path(app_path, 'forms.py')
 forms.touch(exist_ok=True)  # will create file, if it exists will do nothing
 
+views_path =  f"{app_path}\\views.py"
+
+with open(f'{views_path}', 'w') as f:
+    f.write("from django.http import HttpResponse \n"
+            "from django.shortcuts import render \n"
+            " \n"
+            "# Create your views here. \n"
+            "def home(request):\n"
+            "    return HttpResponse(\"<h1 style='text-align: center; margin-top: 10rem;'>Everything Good!</h1>\") \n")
+                
+
 with open(f'{create_urls}', 'w') as f:
     f.write("from django.urls import path \n"
             "from .views import * \n"
+            "  \n"
             f"app_name = '{app_name}'\n"
+            " \n"
             "urlpatterns = [ \n"
-            "       \n"
+            " path('', home, name='home'), \n"
             "]")
     
 print('=====> Progress Finished 100% <=====')
