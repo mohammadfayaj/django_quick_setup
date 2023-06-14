@@ -59,7 +59,7 @@ def home(request):
 
 
 - #### The scripts are written in Python 3+ and use standard libraries such as `subprocess`, `os`, `shutil`, and `pathlib`.
-- #### The scripts can be executed from the command line or just double click on the `execute_django_dev_create.cmd` 
+- #### It can be executed from the command line or just double click on the `execute_django_dev_create.cmd`.
 
 
 This repository is open source and licensed under the MIT License. You are free to use, modify, and distribute the scripts as long as you give credit to the original author and include the license file. If you find any bugs or have any suggestions for improvement, please open an issue or a pull request on GitHub. Thank you for using these Python scripts!
