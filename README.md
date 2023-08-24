@@ -1,4 +1,4 @@
-# Django Development Project Auto Creation.
+# Django Development Project Creation.
 ## Are you bored to create Django dev Project?
 
 https://github.com/mohammadfayaj/Django_Auto_Project/assets/61315077/3a89c966-1aab-480c-b24f-e3d0ff2494e5
