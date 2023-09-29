@@ -1,3 +1,6 @@
+![Static Badge](https://img.shields.io/badge/python%203.10.0-python?logo=python&labelColor=white&color=blue)
+
+
 # Django Development Project Creation.
 ## Are you bored to create Django dev Project?
 
